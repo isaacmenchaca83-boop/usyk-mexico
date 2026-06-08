@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hostname</key>
+	<string>MacBook-Neo-de-Isaac.local</string>
+	<key>hostuuid</key>
+	<string>0D0E9776-67F7-5FCA-9926-CA2EE556E33B</string>
+	<key>pid</key>
+	<integer>25887</integer>
+	<key>processname</key>
+	<string>photolibraryd</string>
+	<key>uid</key>
+	<integer>501</integer>
+</dict>
+</plist>

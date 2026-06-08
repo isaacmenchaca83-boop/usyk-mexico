@@ -1,0 +1,97 @@
+{
+  "version" : 10,
+  "layers" : [
+    {
+      "frame" : {
+        "Width" : 1868,
+        "Height" : 4032,
+        "Y" : 0,
+        "X" : 324
+      },
+      "filename" : "portrait-layer_background.HEIC",
+      "zPosition" : 5,
+      "identifier" : "background"
+    }
+  ],
+  "properties" : {
+    "settlingEffectEnabled" : false,
+    "depthEnabled" : false,
+    "portraitLayout" : {
+      "clockLayerOrder" : "ClockAboveForeground",
+      "adaptiveVisibleFrame" : {
+        "Width" : 1863.1279620853081,
+        "Height" : 4032,
+        "Y" : 0,
+        "X" : 325.24481516587679
+      },
+      "clockIntersection" : 2,
+      "deviceResolution" : {
+        "Width" : 1170,
+        "Height" : 2532
+      },
+      "spatialVisibleFrame" : {
+        "Width" : 0,
+        "Height" : 0,
+        "Y" : 0,
+        "X" : 0
+      },
+      "layoutVariant" : 1,
+      "inactiveAdaptive" : {
+        "Width" : 0,
+        "Height" : 0,
+        "Y" : 0,
+        "X" : 0
+      },
+      "spatialAdaptiveFrame" : {
+        "Width" : 0,
+        "Height" : 0,
+        "Y" : 0,
+        "X" : 0
+      },
+      "inactiveFrame" : {
+        "Width" : 1863.1279620853081,
+        "Height" : 4032,
+        "Y" : 0,
+        "X" : 325.24481516587679
+      },
+      "adaptiveTimeFrame" : {
+        "Width" : 0,
+        "Height" : 336,
+        "Y" : 3078.1421800947869,
+        "X" : 325.24481516587679
+      },
+      "visibleFrame" : {
+        "Width" : 1863.1279620853081,
+        "Height" : 4032,
+        "Y" : 0,
+        "X" : 325.24481516587679
+      },
+      "hasTopEdgeContact" : false,
+      "parallaxPadding" : {
+        "Width" : 124.2085308056872,
+        "Height" : 305.74407582938392
+      },
+      "salientContentFrame" : {
+        "Width" : 1693.4400000000001,
+        "Height" : 1653.1199999999999,
+        "Y" : 443.51999999999998,
+        "X" : 393.12
+      },
+      "imageSize" : {
+        "Width" : 3024,
+        "Height" : 4032
+      },
+      "timeFrame" : {
+        "Width" : 1605.1563981042655,
+        "Height" : 336,
+        "Y" : 3078.1421800947869,
+        "X" : 454.23059715639812
+      },
+      "maxClockShift" : 0
+    },
+    "spatialPhotoEnabled" : false,
+    "userAdjustedVisibleFrame" : false,
+    "parallaxDisabled" : false,
+    "clockAreaLuminance" : -1
+  }
+}
