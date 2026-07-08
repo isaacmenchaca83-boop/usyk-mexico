@@ -144,7 +144,7 @@ class AnimationController {
     public render() {
         const ctx = this.ctx
         if (!ctx) return
-        ctx.fillStyle = 'black'
+        ctx.fillStyle = '#111111'
         ctx.fillRect(0, 0, this.size, this.size)
         ctx.save()
         ctx.translate(this.visibleWidth / 2, this.visibleHeight / 2)

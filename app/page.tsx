@@ -169,14 +169,16 @@ export default function Home() {
     message: ''
   })
   const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
     await new Promise(r => setTimeout(r, 800))
-    alert('¡Gracias! Te contactaremos pronto.')
     setFormData({ email: '', phone: '', company: '', industry: '', message: '' })
     setSubmitting(false)
+    setSubmitted(true)
   }
 
   return (
@@ -185,35 +187,58 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': 'LocalBusiness',
-          name: 'USYK México',
-          description: 'Distribuidor líder de herramientas de corte de precisión para industria automotriz y aeroespacial en México.',
-          url: 'https://usykmexico.com',
-          telephone: '+526141975092',
-          email: 'ventas@usykmexico.com',
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Chihuahua',
-            addressRegion: 'Chihuahua',
-            addressCountry: 'MX',
-          },
-          geo: {
-            '@type': 'GeoCoordinates',
-            latitude: '28.6353',
-            longitude: '-106.0889',
-          },
-          openingHours: 'Mo-Fr 08:00-18:00',
-          priceRange: '$$',
-          hasOfferCatalog: {
-            '@type': 'OfferCatalog',
-            name: 'Herramientas de Corte de Precisión',
-            itemListElement: [
-              { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Brocas de Precisión' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Insertos PCD/PCBN' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Soluciones a Medida' } },
-            ],
-          },
-          sameAs: ['https://usykmexico.com'],
+          '@graph': [
+            {
+              '@type': 'LocalBusiness',
+              '@id': 'https://usykmexico.com/#organization',
+              name: 'USYK México',
+              description: 'Distribuidor líder de herramientas de corte de precisión para industria automotriz y aeroespacial en México.',
+              url: 'https://usykmexico.com',
+              telephone: '+526141975092',
+              email: 'ventas@usykmexico.com',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Chihuahua',
+                addressRegion: 'Chihuahua',
+                addressCountry: 'MX',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: '28.6353',
+                longitude: '-106.0889',
+              },
+              openingHours: 'Mo-Fr 08:00-18:00',
+              priceRange: '$$',
+              areaServed: [
+                { '@type': 'State', name: 'Chihuahua', containedInPlace: { '@type': 'Country', name: 'México' } },
+                { '@type': 'State', name: 'Querétaro', containedInPlace: { '@type': 'Country', name: 'México' } },
+                { '@type': 'State', name: 'Sonora', containedInPlace: { '@type': 'Country', name: 'México' } },
+                { '@type': 'State', name: 'Nuevo León', containedInPlace: { '@type': 'Country', name: 'México' } },
+                { '@type': 'Country', name: 'México' },
+              ],
+              sameAs: [
+                'https://www.linkedin.com/in/jesus-chacon-95a435367/',
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Herramientas de Corte de Precisión',
+                itemListElement: [
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Brocas de Precisión' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Insertos PCD/PCBN' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Soluciones a Medida' } },
+                ],
+              },
+            },
+            {
+              '@type': 'WebSite',
+              '@id': 'https://usykmexico.com/#website',
+              url: 'https://usykmexico.com',
+              name: 'USYK México',
+              inLanguage: 'es-MX',
+              description: 'Herramientas de corte de precisión para industria automotriz y aeroespacial en México',
+              publisher: { '@id': 'https://usykmexico.com/#organization' },
+            },
+          ],
         })}}
       />
 
@@ -228,12 +253,37 @@ export default function Home() {
             <Link href="#contacto" className="hover:text-white transition-colors duration-200 cursor-pointer">Contacto</Link>
             <Link href="/blog" className="hover:text-white transition-colors duration-200 cursor-pointer">Blog</Link>
           </div>
-          <button
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-5 py-2 bg-[#C4957A] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#D4A890] transition-colors duration-200 cursor-pointer"
-          >
-            Cotizar
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+              className="hidden md:block px-5 py-2 bg-[#C4957A] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#D4A890] transition-colors duration-200 cursor-pointer"
+            >
+              Cotizar
+            </button>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+              aria-label="Menú"
+            >
+              <span className={`block h-px w-6 bg-white transition-all duration-300 ${menuOpen ? 'translate-y-2.5 rotate-45' : ''}`} />
+              <span className={`block h-px w-6 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-px w-6 bg-white transition-all duration-300 ${menuOpen ? '-translate-y-2.5 -rotate-45' : ''}`} />
+            </button>
+          </div>
+        </div>
+        {/* Mobile menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-64 border-t border-white/[0.06]' : 'max-h-0'}`}>
+          <div className="px-6 py-6 flex flex-col gap-5">
+            <Link href="#soluciones" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer">Soluciones</Link>
+            <Link href="#contacto" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer">Contacto</Link>
+            <Link href="/blog" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/60 hover:text-white transition-colors cursor-pointer">Blog</Link>
+            <button
+              onClick={() => { setMenuOpen(false); document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' }) }}
+              className="self-start px-5 py-2.5 bg-[#C4957A] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#D4A890] transition-colors duration-200 cursor-pointer"
+            >
+              Cotizar
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -270,9 +320,9 @@ export default function Home() {
             <span className="text-[#C4957A]">MÉXICO</span>
           </h1>
 
-          <p className="text-base md:text-lg text-white/45 mb-12 max-w-lg mx-auto leading-relaxed font-medium">
+          <p className="text-base md:text-lg text-white/60 mb-12 max-w-lg mx-auto leading-relaxed font-medium">
             Precisión extrema para la industria automotriz y aeroespacial.
-            Herramientas certificadas <span className="text-white/75">AS9100</span>.
+            Herramientas certificadas <span className="text-white/85">AS9100</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -354,7 +404,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight max-w-lg">
               Soluciones<br />Especializadas
             </h2>
-            <p className="text-white/35 text-sm mt-5 max-w-md leading-relaxed">
+            <p className="text-white/50 text-sm mt-5 max-w-md leading-relaxed">
               Herramientas y servicios diseñados para maximizar productividad en operaciones críticas de manufactura.
             </p>
           </div>
@@ -391,7 +441,7 @@ export default function Home() {
                 <h3 className="text-lg font-black text-white mb-3 group-hover:text-[#C4957A] transition-colors duration-300">
                   {sol.title}
                 </h3>
-                <p className="text-white/35 text-sm leading-relaxed mb-6">{sol.desc}</p>
+                <p className="text-white/50 text-sm leading-relaxed mb-6">{sol.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {sol.tags.map(tag => (
                     <span key={tag} className="px-3 py-1 border border-white/[0.08] text-white/25 text-[10px] font-bold tracking-widest uppercase">
@@ -455,7 +505,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
                 Solicita tu<br />Cotización
               </h2>
-              <p className="text-white/35 text-sm leading-relaxed mb-10 max-w-xs">
+              <p className="text-white/50 text-sm leading-relaxed mb-10 max-w-xs">
                 Completa el formulario y nuestro equipo de especialistas te contactará con una solución personalizada.
               </p>
               <div className="space-y-4">
@@ -479,6 +529,23 @@ export default function Home() {
             </div>
 
             <div className="border border-white/[0.06] p-8">
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center h-full min-h-[320px] text-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-[#C4957A]/15 border border-[#C4957A]/30 flex items-center justify-center text-[#C4957A]">
+                    <IconCheck />
+                  </div>
+                  <h3 className="text-xl font-black text-white">¡Solicitud enviada!</h3>
+                  <p className="text-white/50 text-sm max-w-xs leading-relaxed">
+                    Nuestro equipo te contactará en menos de 24 horas hábiles con precios y disponibilidad.
+                  </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-2 text-xs text-white/30 hover:text-white/60 underline transition-colors cursor-pointer"
+                  >
+                    Enviar otra solicitud
+                  </button>
+                </div>
+              ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -559,6 +626,7 @@ export default function Home() {
                   )}
                 </button>
               </form>
+              )}
             </div>
           </div>
         </div>
@@ -570,7 +638,7 @@ export default function Home() {
           <div>
             <div className="text-[#C4957A] text-[10px] font-bold tracking-[0.4em] uppercase mb-2">Recursos</div>
             <h2 className="text-2xl md:text-3xl font-black text-white">Aprende sobre la Industria</h2>
-            <p className="text-white/35 text-sm mt-2">Artículos y guías sobre herramientas de corte y optimización de procesos</p>
+            <p className="text-white/50 text-sm mt-2">Artículos y guías sobre herramientas de corte y optimización de procesos</p>
           </div>
           <Link
             href="/blog"
@@ -590,13 +658,13 @@ export default function Home() {
               <div className="text-lg font-black tracking-[0.14em] text-white mb-4">
                 USYK <span className="text-[#C4957A]">MX</span>
               </div>
-              <p className="text-white/20 text-xs leading-relaxed">
+              <p className="text-white/35 text-xs leading-relaxed">
                 Herramientas de corte de precisión para la industria automotriz y aeroespacial en México.
               </p>
             </div>
             <div>
               <div className="text-[10px] font-bold text-white/20 tracking-[0.3em] uppercase mb-5">Contacto</div>
-              <ul className="space-y-3 text-white/35 text-xs">
+              <ul className="space-y-3 text-white/50 text-xs">
                 <li className="flex items-center gap-2"><IconPhone /><span>+52 (614) 197-5092</span></li>
                 <li className="flex items-center gap-2"><IconPhone /><span>+52 (614) 245-6923</span></li>
                 <li className="flex items-center gap-2"><IconPhone /><span>+52 (614) 229-0914</span></li>
@@ -606,18 +674,31 @@ export default function Home() {
             <div>
               <div className="text-[10px] font-bold text-white/20 tracking-[0.3em] uppercase mb-5">Navegación</div>
               <ul className="space-y-3">
-                <li><Link href="#soluciones" className="text-white/35 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Soluciones</Link></li>
-                <li><Link href="#contacto" className="text-white/35 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Contacto</Link></li>
-                <li><Link href="/blog" className="text-white/35 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Blog</Link></li>
+                <li><Link href="#soluciones" className="text-white/50 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Soluciones</Link></li>
+                <li><Link href="#contacto" className="text-white/50 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Contacto</Link></li>
+                <li><Link href="/blog" className="text-white/50 text-xs hover:text-white transition-colors duration-200 cursor-pointer">Blog</Link></li>
               </ul>
             </div>
           </div>
           <div className="border-t border-white/[0.05] pt-8 flex flex-col md:flex-row justify-between items-center gap-3">
-            <p className="text-white/15 text-xs">© 2026 USYK México. Todos los derechos reservados.</p>
-            <p className="text-white/10 text-[10px] tracking-[0.3em] uppercase">Herramientas de Corte de Precisión</p>
+            <p className="text-white/30 text-xs">© 2026 USYK México. Todos los derechos reservados.</p>
+            <p className="text-white/20 text-[10px] tracking-[0.3em] uppercase">Herramientas de Corte de Precisión</p>
           </div>
         </div>
       </footer>
+
+      {/* ── WHATSAPP FLOTANTE ── */}
+      <a
+        href="https://wa.me/526141975092?text=Hola%2C%20quisiera%20cotizar%20herramientas%20de%20corte"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg hover:scale-105 hover:shadow-[0_0_24px_rgba(37,211,102,0.4)] transition-all duration-200"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
 
     </div>
   )
