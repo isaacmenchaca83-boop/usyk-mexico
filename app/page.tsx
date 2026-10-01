@@ -322,7 +322,7 @@ export default function Home() {
 
           <p className="text-base md:text-lg text-white/60 mb-12 max-w-lg mx-auto leading-relaxed font-medium">
             Precisión extrema para la industria automotriz y aeroespacial.
-            Herramientas certificadas <span className="text-white/85">AS9100</span>.
+            Herramientas de alto rendimiento para manufactura de clase mundial.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -355,9 +355,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3">
             {[
-              { num: 'AS9100', label: 'Certificación' },
-              { num: '500+', label: 'Clientes Activos' },
-              { num: '3', label: 'Sectores Industriales' },
+              { num: 'PCD', label: 'Diamante Policristalino' },
+              { num: 'PCBN', label: 'Nitruro de Boro Cúbico' },
+              { num: '3', label: 'Familias de Producto' },
             ].map((stat, i) => (
               <div key={stat.num} className={`text-center py-6 px-4 ${i < 2 ? 'border-r border-white/[0.06]' : ''}`}>
                 <div className="text-3xl md:text-4xl font-black text-[#C4957A] mb-1">{stat.num}</div>
@@ -422,8 +422,8 @@ export default function Home() {
                 icon: <IconDiamond />,
                 num: '02',
                 title: 'Insertos Certificados',
-                desc: 'Insertos PCD/PCBN con certificación AS9100 para aplicaciones críticas en automotriz y aeroespacial.',
-                tags: ['PCD / PCBN', 'AS9100', 'Alta precisión']
+                desc: 'Insertos PCD/PCBN de alta precisión para aplicaciones críticas en automotriz y aeroespacial.',
+                tags: ['PCD / PCBN', 'Alta precisión', 'Larga vida útil']
               },
               {
                 icon: <IconGear />,
@@ -471,7 +471,7 @@ export default function Home() {
               <div className="space-y-5">
                 {[
                   'Distribuidor autorizado con más de 20 años en el mercado mexicano',
-                  'Certificación AS9100 para sectores automotriz y aeroespacial',
+                  'Herramientas de alta calidad para sectores automotriz y aeroespacial',
                   'Soporte técnico especializado en optimización de procesos de corte',
                   'Asesoría personalizada y entrega rápida sin costos adicionales',
                   'Herramientas de alto rendimiento a precios competitivos',
