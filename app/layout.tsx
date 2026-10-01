@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: 'USYK México — Herramientas de Corte de Precisión | Automotriz y Aeroespacial',
     template: '%s | USYK México'
   },
-  description: 'Distribuidor líder de herramientas de corte de precisión en México. Brocas, insertos PCD/PCBN y soluciones a medida para industria automotriz y aeroespacial. Certificación AS9100. Chihuahua, México.',
+  description: 'Distribuidor líder de herramientas de corte de precisión en México. Brocas, insertos PCD/PCBN y soluciones a medida para industria automotriz y aeroespacial. Chihuahua, México.',
   keywords: [
     'herramientas de corte México',
     'insertos PCD México',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'brocas de precisión',
     'maquinado automotriz México',
     'herramientas aeroespacial México',
-    'AS9100 México',
+    'herramientas de alta precisión México',
     'herramientas corte Chihuahua',
     'USYK México',
     'distribuidor herramientas corte',
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'USYK México',
     title: 'USYK México — Herramientas de Corte de Precisión',
-    description: 'Distribuidor líder de herramientas de corte de precisión para industria automotriz y aeroespacial en México. Certificación AS9100.',
+    description: 'Distribuidor líder de herramientas de corte de precisión para industria automotriz y aeroespacial en México. Chihuahua, México.',
     images: [
       {
-        url: `${siteUrl}/og-image.jpg`,
+        url: `${siteUrl}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: 'USYK México - Herramientas de Corte de Precisión',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'USYK México — Herramientas de Corte de Precisión',
     description: 'Distribuidor líder de herramientas de corte de precisión para industria automotriz y aeroespacial en México.',
-    images: [`${siteUrl}/og-image.jpg`],
+    images: [`${siteUrl}/opengraph-image`],
   },
   alternates: {
     canonical: siteUrl,
@@ -85,7 +85,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${barlow.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="es-MX" className={`${barlow.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           {children}

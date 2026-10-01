@@ -470,7 +470,7 @@ export default function Home() {
               </h2>
               <div className="space-y-5">
                 {[
-                  'Distribuidor autorizado con más de 20 años en el mercado mexicano',
+                  'Amplia experiencia en distribución de herramientas de corte en México',
                   'Herramientas de alta calidad para sectores automotriz y aeroespacial',
                   'Soporte técnico especializado en optimización de procesos de corte',
                   'Asesoría personalizada y entrega rápida sin costos adicionales',
