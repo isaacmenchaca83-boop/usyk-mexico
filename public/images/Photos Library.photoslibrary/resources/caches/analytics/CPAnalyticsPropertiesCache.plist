@@ -10,15 +10,15 @@
 		<string>Unknown</string>
 	</dict>
 	<key>cpa_cache_lastCacheTime</key>
-	<date>2026-06-08T15:17:42Z</date>
+	<date>2026-10-01T15:40:50Z</date>
 	<key>cpa_cache_librarySummary</key>
 	<dict>
 		<key>cpa_common_collectionCount</key>
-		<integer>693</integer>
+		<integer>1066</integer>
 		<key>cpa_common_faceAnalysisProgress</key>
 		<real>1</real>
 		<key>cpa_common_fullAnalysisProgress</key>
-		<real>0.99349240780911063</real>
+		<real>0.39035087719298245</real>
 		<key>cpa_common_icpl_enabled</key>
 		<true/>
 		<key>cpa_common_icpl_exceedingQuota</key>
@@ -30,19 +30,19 @@
 		<key>cpa_common_icpl_veryLowDiskSpace</key>
 		<false/>
 		<key>cpa_common_mediaAnalysisImageProgress</key>
-		<real>0.99608610567514677</real>
+		<real>0.99837925445705022</real>
 		<key>cpa_common_momentCount</key>
-		<integer>59</integer>
+		<integer>106</integer>
 		<key>cpa_common_personCount</key>
-		<integer>2</integer>
+		<integer>8</integer>
 		<key>cpa_common_photoCount</key>
-		<integer>434</integer>
+		<integer>787</integer>
 		<key>cpa_common_sceneAnalysisProgress</key>
 		<real>1</real>
 		<key>cpa_common_sharedLibraryEnabled</key>
 		<false/>
 		<key>cpa_common_videoCount</key>
-		<integer>259</integer>
+		<integer>279</integer>
 	</dict>
 	<key>cpa_music_hasAppleMusicSubscription</key>
 	<false/>

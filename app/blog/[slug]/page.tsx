@@ -53,6 +53,12 @@ function formatDate(dateStr: string) {
   })
 }
 
+function parseInline(text: string): string {
+  return text
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white/80 font-bold">$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#C4957A] underline underline-offset-2 hover:text-[#D4A890] transition-colors">$1</a>')
+}
+
 function renderContent(content: string) {
   const lines = content.trim().split('\n')
   const elements: React.ReactNode[] = []
@@ -83,7 +89,7 @@ function renderContent(content: string) {
           {items.map((item, j) => (
             <li key={j} className="flex items-start gap-3 text-white/50 text-sm">
               <span className="text-[#C4957A] mt-1 flex-shrink-0">—</span>
-              <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white/80">$1</strong>') }} />
+              <span dangerouslySetInnerHTML={{ __html: parseInline(item) }} />
             </li>
           ))}
         </ul>
@@ -116,10 +122,7 @@ function renderContent(content: string) {
     } else if (line.length > 0) {
       elements.push(
         <p key={i} className="text-white/50 text-sm leading-relaxed mb-4"
-          dangerouslySetInnerHTML={{
-            __html: line
-              .replace(/\*\*(.*?)\*\*/g, '<strong class="text-white/80 font-bold">$1</strong>')
-          }}
+          dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       )
     }
@@ -140,17 +143,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${siteUrl}/blog/${post.slug}#article`,
     headline: post.title,
     description: post.metaDescription,
-    author: { '@type': 'Organization', name: 'USYK México', url: siteUrl },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}/blog/${post.slug}` },
+    author: { '@type': 'Organization', name: 'USYK México', url: siteUrl, '@id': `${siteUrl}/#organization` },
     publisher: {
       '@type': 'Organization',
       name: 'USYK México',
       url: siteUrl,
+      '@id': `${siteUrl}/#organization`,
     },
     datePublished: post.date,
+    dateModified: post.date,
     url: `${siteUrl}/blog/${post.slug}`,
     keywords: post.keywords.join(', '),
+    mentions: [
+      { '@type': 'Thing', name: 'USMCA' },
+      { '@type': 'Place', name: 'México' },
+      { '@type': 'Thing', name: 'Industria Automotriz Mexicana' },
+      { '@type': 'Thing', name: 'Industria Aeroespacial Mexicana' },
+    ],
   }
 
   return (
@@ -158,6 +171,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+            { '@type': 'ListItem', position: 3, name: post.title },
+          ],
+        }) }}
       />
 
       {/* Navbar */}

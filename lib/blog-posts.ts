@@ -81,54 +81,15 @@ La fabricación de componentes aeroespaciales implica trabajar con materiales ex
 
 **Compuestos de Fibra de Carbono (CFRP):** Cada vez más presentes en estructuras primarias de aeronaves. Requieren herramientas con filos extremadamente afilados para evitar la delaminación.
 
-## Certificación AS9100: El Requisito Mínimo
+## Calidad y Trazabilidad: El Requisito Mínimo
 
-Para participar como proveedor en la cadena aeroespacial, las empresas deben cumplir con la certificación **AS9100**, que establece los requisitos de gestión de calidad específicos para la industria aeronáutica, espacial y de defensa.
+Para participar como proveedor en la cadena aeroespacial, las empresas deben cumplir con los más altos estándares de gestión de calidad, trazabilidad y documentación técnica.
 
-Contar con herramientas de corte certificadas y trazables es parte fundamental del cumplimiento de este estándar. En USYK México, todos nuestros insertos y herramientas para aplicaciones aeroespaciales cuentan con documentación y certificación que soporta los requerimientos AS9100 de nuestros clientes.
+Contar con herramientas de corte certificadas y trazables es parte fundamental del cumplimiento de estos estándares. En USYK México, todos nuestros insertos y herramientas para aplicaciones aeroespaciales cuentan con documentación técnica completa.
 
 ## El Futuro es de la Precisión
 
 Con las proyecciones de crecimiento de la industria aeroespacial mexicana apuntando a duplicar su tamaño para 2030, la demanda de herramientas de corte de alto rendimiento no hará más que crecer. Estar preparado con los proveedores correctos hoy es la diferencia entre liderar ese crecimiento o quedarse atrás.
-    `
-  },
-  {
-    slug: 'certificacion-as9100-proveedores-aeroespaciales-mexico',
-    title: 'Certificación AS9100: El Estándar que Abre las Puertas de la Industria Aeroespacial',
-    excerpt: 'Si tu empresa quiere proveer a la industria aeroespacial en México, la certificación AS9100 no es opcional. Te explicamos qué significa y por qué las herramientas que usas también importan.',
-    category: 'Calidad',
-    date: '2025-05-15',
-    readTime: 5,
-    metaDescription: 'La certificación AS9100 es esencial para proveedores aeroespaciales en México. Descubre qué implica este estándar y cómo las herramientas de corte certificadas de USYK México te ayudan a cumplirlo.',
-    keywords: ['AS9100 México', 'certificación aeroespacial', 'calidad manufactura aeroespacial', 'herramientas certificadas AS9100'],
-    content: `
-## ¿Qué es la Certificación AS9100?
-
-La certificación **AS9100** es el sistema de gestión de calidad específico para las industrias aeronáutica, espacial y de defensa. Basada en la norma ISO 9001, agrega requisitos adicionales que abordan los aspectos únicos de seguridad, confiabilidad y trazabilidad que exige el sector aeroespacial.
-
-Para cualquier empresa que desee ser proveedor de compañías como Boeing, Airbus, Safran, Honeywell o GE Aviation en México, obtener y mantener la certificación AS9100 es prácticamente **un requisito no negociable**.
-
-## ¿Por qué las Herramientas de Corte También Deben Estar Certificadas?
-
-Uno de los principios fundamentales del AS9100 es la **trazabilidad total**. Esto significa que cada componente, material y herramienta usada en el proceso productivo debe poder rastrearse y documentarse.
-
-Cuando se usa una herramienta de corte sin certificación o documentación adecuada, se crea un eslabón débil en esa cadena de trazabilidad. Esto puede resultar en:
-
-- **No conformidades** durante auditorías del cliente
-- Rechazos de producto terminado
-- Pérdida de certificaciones y contratos
-- Riesgos de seguridad en componentes críticos
-
-## Lo que USYK México Ofrece para AS9100
-
-En USYK México entendemos perfectamente las exigencias del sector aeroespacial. Por eso ofrecemos:
-
-- **Documentación completa** de cada lote de herramientas
-- **Certificados de material** y especificaciones técnicas verificables
-- **Asesoría técnica** para selección de herramientas según normas aeroespaciales
-- **Soporte en procesos de auditoría** para nuestros clientes
-
-Nuestros insertos PCD y PCBN, brocas de carburo y fresas especiales cumplen con los estándares de calidad que la industria aeroespacial demanda. Contáctanos para conocer cómo podemos apoyar el cumplimiento de tu certificación AS9100.
     `
   },
   {
@@ -389,7 +350,7 @@ Tres estados concentran las mayores oportunidades dentro de la cadena aeronáuti
 
 Convertirse en proveedor de la cadena aeronáutica no es sencillo — requiere:
 
-**Certificaciones de calidad:** AS9100 es prácticamente obligatoria. Algunas OEM también requieren Nadcap para procesos especiales.
+**Certificaciones de calidad:** Los estándares de gestión de calidad son prácticamente obligatorios. Algunas OEM también requieren Nadcap para procesos especiales.
 
 **Capacidad de maquinado de precisión:** Los componentes aeronáuticos exigen tolerancias de ±0.005 mm en muchos casos. Esto requiere máquinas CNC de alta precisión y, fundamentalmente, **herramientas de corte de alto rendimiento**.
 
@@ -399,9 +360,9 @@ Convertirse en proveedor de la cadena aeronáutica no es sencillo — requiere:
 
 ## El Papel de las Herramientas en la Certificación
 
-Una realidad que muchas empresas subestiman: **las herramientas de corte que usas afectan directamente tu capacidad de certificarte**. Herramientas sin certificación, sin documentación técnica y sin trazabilidad pueden bloquear tu proceso de certificación AS9100.
+Una realidad que muchas empresas subestiman: **las herramientas de corte que usas afectan directamente tu capacidad de certificarte**. Herramientas sin documentación técnica y sin trazabilidad pueden bloquear tu proceso de certificación de calidad.
 
-En USYK México ayudamos a nuestros clientes a seleccionar herramientas certificadas con la documentación necesaria para soportar sus procesos de calidad. Contacta con nosotros si estás en proceso de certificación — podemos ser un aliado estratégico en tu camino.
+En USYK México ayudamos a nuestros clientes a seleccionar herramientas con la documentación necesaria para soportar sus procesos de calidad. Contacta con nosotros — podemos ser un aliado estratégico en tu camino.
     `
   },
   {

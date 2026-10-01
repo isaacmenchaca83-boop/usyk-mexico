@@ -5,7 +5,7 @@
 	<key>ComputeSyncUploadPolicy.cachedResult</key>
 	<false/>
 	<key>ComputeSyncUploadPolicy.lastCheckedDate</key>
-	<date>2026-06-08T03:17:24Z</date>
+	<date>2026-10-01T18:38:16Z</date>
 	<key>DuplicateSharedLibraryCPLConfigurationFeatureVersion</key>
 	<integer>0</integer>
 	<key>DuplicateSharedLibraryEnabledMarker</key>
@@ -13,7 +13,7 @@
 	<key>GlobalValue</key>
 	<dict>
 		<key>isReadyForAnalysisDate</key>
-		<date>2026-06-01T15:03:12Z</date>
+		<date>2026-10-01T22:40:14Z</date>
 	</dict>
 	<key>Library</key>
 	<dict>
@@ -392,6 +392,6 @@
 		<dict/>
 	</dict>
 	<key>PLDeferredCriticalMaintenanceTask</key>
-	<date>2026-06-08T03:17:24Z</date>
+	<date>2026-10-01T18:38:16Z</date>
 </dict>
 </plist>

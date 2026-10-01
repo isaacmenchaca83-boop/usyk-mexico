@@ -59,7 +59,7 @@ export default function BlogPage() {
             <span className="h-px w-6 bg-[#C4957A]" />
             <span className="text-[#C4957A] text-[10px] font-bold tracking-[0.4em] uppercase">Recursos</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-4">Blog</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4">Blog de Herramientas de Corte: Automotriz y Aeroespacial</h1>
           <p className="text-white/40 text-base max-w-xl">
             Conocimiento técnico sobre herramientas de corte, maquinado de precisión e industria manufacturera en México.
           </p>

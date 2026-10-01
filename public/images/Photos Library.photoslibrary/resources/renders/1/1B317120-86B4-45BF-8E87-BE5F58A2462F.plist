@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>adjustmentBaseVersion</key>
+	<integer>0</integer>
+	<key>adjustmentData</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
+	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGlCwwVFhdVJG51bGzTDQ4PEBIU
+	V05TLmtleXNaTlMub2JqZWN0c1YkY2xhc3OhEYACoROAA4AEXWxvY2FsRGVkdXBLZXlf
+	EBtaTjVfVUhtR3k0Tks0SVM5SlZ6Z01ZdjJic1nSGBkaG1okY2xhc3NuYW1lWCRjbGFz
+	c2VzXxATTlNNdXRhYmxlRGljdGlvbmFyeaMcHR5fEBNOU011dGFibGVEaWN0aW9uYXJ5
+	XE5TRGljdGlvbmFyeVhOU09iamVjdAAIABEAGgAkACkAMgA3AEkATABRAFMAWQBfAGYA
+	bgB5AIAAggCEAIYAiACKAJgAtgC7AMYAzwDlAOkA/wEMAAAAAAAAAgEAAAAAAAAAHwAA
+	AAAAAAAAAAAAAAAAARU=
+	</data>
+	<key>adjustmentEditorBundleID</key>
+	<string>com.google.photos</string>
+	<key>adjustmentFormatIdentifier</key>
+	<string>com.google.photos.editing.filtering.nondestructive</string>
+	<key>adjustmentFormatVersion</key>
+	<string>1.2</string>
+	<key>adjustmentRenderTypes</key>
+	<integer>16384</integer>
+	<key>adjustmentTimestamp</key>
+	<date>2026-09-22T22:58:51Z</date>
+</dict>
+</plist>

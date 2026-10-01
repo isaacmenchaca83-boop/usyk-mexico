@@ -9,12 +9,12 @@
 	<key>cloudAssetCountPerType</key>
 	<dict>
 		<key>public.image</key>
-		<integer>259</integer>
+		<integer>365</integer>
 		<key>public.movie</key>
 		<integer>252</integer>
 	</dict>
 	<key>cloudAssetCountPerTypeLastCheckDate</key>
-	<date>2026-06-08T05:15:28Z</date>
+	<date>2026-10-01T01:12:03Z</date>
 	<key>connectedToNetwork</key>
 	<true/>
 	<key>hasBatteryBudgetKey</key>
@@ -23,6 +23,8 @@
 	<true/>
 	<key>hasValidSystemBudgetKey</key>
 	<true/>
+	<key>iCloudLibraryClientIsNotAuthenticated</key>
+	<false/>
 	<key>iCloudLibraryExists</key>
 	<true/>
 	<key>inAirplaneMode</key>
@@ -34,7 +36,7 @@
 	<key>keychainCDPEnabled</key>
 	<true/>
 	<key>lastSyncDate</key>
-	<date>2026-06-08T22:13:25Z</date>
+	<date>2026-10-01T22:40:10Z</date>
 	<key>unBlockedReason</key>
 	<integer>1</integer>
 </dict>
