@@ -355,9 +355,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3">
             {[
-              { num: 'PCD', label: 'Diamante Policristalino' },
-              { num: 'PCBN', label: 'Nitruro de Boro Cúbico' },
-              { num: '3', label: 'Familias de Producto' },
+              { num: 'Élite', label: 'Calidad de clase mundial' },
+              { num: 'Top', label: 'Los mejores en la industria' },
+              { num: '#1', label: 'Precisión en cada corte' },
             ].map((stat, i) => (
               <div key={stat.num} className={`text-center py-6 px-4 ${i < 2 ? 'border-r border-white/[0.06]' : ''}`}>
                 <div className="text-3xl md:text-4xl font-black text-[#C4957A] mb-1">{stat.num}</div>
